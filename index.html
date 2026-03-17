@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan's Casa De Flores | Hecho Con Amor | Springdale, AR</title>
+    <meta name="description" content="Custom handmade floral arrangements made with love in Springdale, Arkansas.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Juan's Casa De Flores</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" data-en="Our Story" data-es="Nuestra Historia">Our Story</a>
+                <a href="#bundles" data-en="Roses" data-es="Rosas">Roses</a>
+                <a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a>
+                <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" data-testid="lang-toggle">
+                    <span class="lang-en active">EN</span> / <span class="lang-es">ES</span>
+                </button>
+                <a href="#order" class="btn btn-primary btn-sm" data-testid="nav-order-btn" data-en="Order Now" data-es="Ordenar">Order Now</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" data-testid="mobile-menu-btn">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#about" data-en="Our Story" data-es="Nuestra Historia">Our Story</a>
+            <a href="#bundles" data-en="Roses" data-es="Rosas">Roses</a>
+            <a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a>
+            <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+            <a href="#order" class="mobile-cta" data-en="Order Now" data-es="Ordenar">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Springdale, Arkansas</p>
+            <h1 class="hero-title" data-en="Flowers Made With Love For Every Special Moment" data-es="Flores Hechas Con Amor Para Cada Momento Especial">Flowers Made With Love For Every Special Moment</h1>
+            <p class="hero-subtitle" data-en="Personalized rose arrangements for birthdays, anniversaries, graduations, and unforgettable gifts." data-es="Arreglos de rosas personalizados para cumpleaños, aniversarios, graduaciones y regalos inolvidables.">Personalized rose arrangements for birthdays, anniversaries, graduations, and unforgettable gifts.</p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-primary" data-testid="hero-order-btn" data-en="Order Now" data-es="Ordenar Ahora">Order Now</a>
+                <a href="#gallery" class="btn btn-outline" data-testid="hero-gallery-btn" data-en="View Arrangements" data-es="Ver Arreglos">View Arrangements</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/flores1.jpg" alt="Florist arranging flowers">
+                    <div class="about-accent"></div>
+                </div>
+                <div class="about-content">
+                    <span class="label" data-en="Our Story" data-es="Nuestra Historia">Our Story</span>
+                    <h2 class="script-title">Hecho Con Amor</h2>
+                    <p class="about-text" data-en="Every arrangement is designed with care, detail, and heart so your flowers feel personal, memorable, and beautiful. We are a local florist in Springdale, Arkansas, dedicated to creating custom handmade bouquets for your most meaningful moments." data-es="Cada arreglo está diseñado con cuidado, detalle y corazón para que tus flores se sientan personales, memorables y hermosas. Somos una florería local en Springdale, Arkansas, dedicada a crear ramos personalizados a mano para tus momentos más significativos.">Every arrangement is designed with care, detail, and heart so your flowers feel personal, memorable, and beautiful. We are a local florist in Springdale, Arkansas, dedicated to creating custom handmade bouquets for your most meaningful moments.</p>
+                    <div class="features">
+                        <div class="feature"><i data-lucide="heart"></i><span data-en="Handmade" data-es="Hecho a Mano">Handmade</span></div>
+                        <div class="feature"><i data-lucide="palette"></i><span data-en="Custom Colors" data-es="Colores Personalizados">Custom Colors</span></div>
+                        <div class="feature"><i data-lucide="map-pin"></i><span data-en="Local Love" data-es="Amor Local">Local Love</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Occasions Section -->
+    <section class="occasions" id="occasions">
+        <div class="container">
+            <div class="section-header">
+                <span class="label" data-en="Perfect For" data-es="Perfecto Para">Perfect For</span>
+                <h2 class="section-title" data-en="Every Special Occasion" data-es="Cada Ocasión Especial">Every Special Occasion</h2>
+            </div>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="cake"></i></div>
+                    <h3 data-en="Birthdays" data-es="Cumpleaños">Birthdays</h3>
+                    <p data-en="Make their day bloom" data-es="Haz florecer su día">Make their day bloom</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="heart"></i></div>
+                    <h3 data-en="Anniversaries" data-es="Aniversarios">Anniversaries</h3>
+                    <p data-en="Celebrate your love" data-es="Celebra tu amor">Celebrate your love</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="graduation-cap"></i></div>
+                    <h3 data-en="Graduations" data-es="Graduaciones">Graduations</h3>
+                    <p data-en="Honor their achievement" data-es="Honra su logro">Honor their achievement</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="flower-2"></i></div>
+                    <h3 data-en="Mother's Day" data-es="Día de las Madres">Mother's Day</h3>
+                    <p data-en="Thank her with beauty" data-es="Agradécele con belleza">Thank her with beauty</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="heart-handshake"></i></div>
+                    <h3 data-en="Valentine's Day" data-es="San Valentín">Valentine's Day</h3>
+                    <p data-en="Express your love" data-es="Expresa tu amor">Express your love</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-icon"><i data-lucide="sparkles"></i></div>
+                    <h3 data-en="Just Because" data-es="Solo Porque Sí">Just Because</h3>
+                    <p data-en="No reason needed" data-es="Sin razón necesaria">No reason needed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="label" data-en="Simple Process" data-es="Proceso Simple">Simple Process</span>
+                <h2 class="section-title" data-en="How Ordering Works" data-es="Cómo Ordenar">How Ordering Works</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h3 data-en="Choose Your Bouquet Size" data-es="Elige el Tamaño de tu Ramo">Choose Your Bouquet Size</h3>
+                        <p data-en="Select from 25 to 150 roses based on your vision" data-es="Selecciona de 25 a 150 rosas según tu visión">Select from 25 to 150 roses based on your vision</p>
+                    </div>
+                    <div class="step-icon"><i data-lucide="flower"></i></div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h3 data-en="Pick Your Colors & Add-ons" data-es="Elige tus Colores y Extras">Pick Your Colors & Add-ons</h3>
+                        <p data-en="Customize with your favorite colors, crowns, butterflies, and more" data-es="Personaliza con tus colores favoritos, coronas, mariposas y más">Customize with your favorite colors, crowns, butterflies, and more</p>
+                    </div>
+                    <div class="step-icon"><i data-lucide="palette"></i></div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h3 data-en="Add Your Message" data-es="Agrega tu Mensaje">Add Your Message</h3>
+                        <p data-en="Include ribbon wording, wrap message, or send inspiration photos" data-es="Incluye mensaje en el listón, envoltura, o envía fotos de inspiración">Include ribbon wording, wrap message, or send inspiration photos</p>
+                    </div>
+                    <div class="step-icon"><i data-lucide="message-square-heart"></i></div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-num">04</div>
+                    <div class="step-content">
+                        <h3 data-en="Submit & Pay Deposit" data-es="Envía y Paga el Depósito">Submit & Pay Deposit</h3>
+                        <p data-en="Secure your order with a 50% deposit and we'll create magic" data-es="Asegura tu orden con un depósito del 50% y crearemos magia">Secure your order with a 50% deposit and we'll create magic</p>
+                    </div>
+                    <div class="step-icon"><i data-lucide="check-circle"></i></div>
+                </div>
+            </div>
+            <div class="steps-cta">
+                <a href="#order" class="btn btn-primary" data-en="Start Your Order" data-es="Comienza tu Orden">Start Your Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundles Section -->
+    <section class="bundles" id="bundles">
+        <div class="container">
+            <div class="section-header light">
+                <span class="label" data-en="Rose Collections" data-es="Colecciones de Rosas">Rose Collections</span>
+                <h2 class="section-title" data-en="Choose Your Bundle" data-es="Elige tu Paquete">Choose Your Bundle</h2>
+                <p class="section-subtitle" data-en="More roses, more colors to express your love" data-es="Más rosas, más colores para expresar tu amor">More roses, more colors to express your love</p>
+            </div>
+            <div class="bundles-grid">
+                <div class="bundle-card">
+                    <div class="bundle-num">25</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><p data-en="Up to 1 color" data-es="Hasta 1 color">Up to 1 color</p></div>
+                    <p class="bundle-desc" data-en="Perfect for a sweet gesture" data-es="Perfecto para un dulce gesto">Perfect for a sweet gesture</p>
+                </div>
+                <div class="bundle-card">
+                    <div class="bundle-num">50</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><span class="dot"></span><p data-en="Up to 2 colors" data-es="Hasta 2 colores">Up to 2 colors</p></div>
+                    <p class="bundle-desc" data-en="A beautiful statement" data-es="Una hermosa declaración">A beautiful statement</p>
+                </div>
+                <div class="bundle-card featured">
+                    <span class="badge" data-en="Popular" data-es="Popular">Popular</span>
+                    <div class="bundle-num">75</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><span class="dot"></span><span class="dot"></span><p data-en="Up to 3 colors" data-es="Hasta 3 colores">Up to 3 colors</p></div>
+                    <p class="bundle-desc" data-en="The perfect arrangement" data-es="El arreglo perfecto">The perfect arrangement</p>
+                </div>
+                <div class="bundle-card">
+                    <div class="bundle-num">100</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><p data-en="Up to 4 colors" data-es="Hasta 4 colores">Up to 4 colors</p></div>
+                    <p class="bundle-desc" data-en="Make a grand impression" data-es="Causa una gran impresión">Make a grand impression</p>
+                </div>
+                <div class="bundle-card">
+                    <div class="bundle-num">125</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><p data-en="Up to 5 colors" data-es="Hasta 5 colores">Up to 5 colors</p></div>
+                    <p class="bundle-desc" data-en="Extraordinary beauty" data-es="Belleza extraordinaria">Extraordinary beauty</p>
+                </div>
+                <div class="bundle-card premium">
+                    <span class="badge gold" data-en="Premium" data-es="Premium">Premium</span>
+                    <div class="bundle-num">150</div>
+                    <h4 data-en="Roses" data-es="Rosas">Roses</h4>
+                    <div class="bundle-colors"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><p data-en="Up to 5 colors" data-es="Hasta 5 colores">Up to 5 colors</p></div>
+                    <p class="bundle-desc" data-en="The ultimate expression of love" data-es="La máxima expresión de amor">The ultimate expression of love</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section class="addons" id="addons">
+        <div class="container">
+            <div class="section-header">
+                <span class="label" data-en="Personalize" data-es="Personaliza">Personalize</span>
+                <h2 class="section-title" data-en="Make It Yours" data-es="Hazlo Tuyo">Make It Yours</h2>
+            </div>
+            <div class="addons-grid">
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="crown"></i></div><h4 data-en="Crowns" data-es="Coronas">Crowns</h4></div>
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="bug"></i></div><h4 data-en="Butterflies" data-es="Mariposas">Butterflies</h4></div>
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="gem"></i></div><h4 data-en="Diamonds" data-es="Diamantes">Diamonds</h4></div>
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="ribbon"></i></div><h4 data-en="Ribbon Message" data-es="Mensaje en Listón">Ribbon Message</h4></div>
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="gift"></i></div><h4 data-en="Custom Wrap" data-es="Envoltura Especial">Custom Wrap</h4></div>
+                <div class="addon-card"><div class="addon-icon"><i data-lucide="wand-2"></i></div><h4 data-en="Freestyle Design" data-es="Diseño Libre">Freestyle Design</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="label" data-en="Our Work" data-es="Nuestro Trabajo">Our Work</span>
+                <h2 class="section-title" data-en="Beautiful Arrangements" data-es="Hermosos Arreglos">Beautiful Arrangements</h2>
+                <p class="section-subtitle" data-en="Loved by customers across Northwest Arkansas" data-es="Amados por clientes en todo el noroeste de Arkansas">Loved by customers across Northwest Arkansas</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large"><img src="img/flores5.jpg" alt="Romance Collection"><div class="gallery-overlay"><span>Romance Collection</span></div></div>
+                <div class="gallery-item"><img src="img/flores2.jpg" alt="Anniversary"><div class="gallery-overlay"><span>Anniversary</span></div></div>
+                <div class="gallery-item"><img src="img/flores3.jpg" alt="Birthday Joy"><div class="gallery-overlay"><span>Birthday Joy</span></div></div>
+                <div class="gallery-item"><img src="img/flores4.jpg" alt="Elegant Peace"><div class="gallery-overlay"><span>Elegant Peace</span></div></div>
+                <div class="gallery-item tall"><img src="img/flores1.jpg" alt="La Graduada"><div class="gallery-overlay"><span>La Graduada</span></div></div>
+                <div class="gallery-item"><img src="img/flores7.jpg" alt="Hecho Con Amor"><div class="gallery-overlay"><span>Hecho Con Amor</span></div></div>
+            </div>
+            <div class="gallery-cta">
+                <a href="https://instagram.com" target="_blank" class="btn btn-outline"><i data-lucide="instagram"></i><span data-en="See More on Instagram" data-es="Ver Más en Instagram">See More on Instagram</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="policies" id="policies">
+        <div class="container">
+            <div class="policies-grid">
+                <div class="policy-card">
+                    <div class="policy-icon"><i data-lucide="clipboard-list"></i></div>
+                    <h3 data-en="Ordering Policy" data-es="Política de Pedidos">Ordering Policy</h3>
+                    <ul>
+                        <li data-en="50% non-refundable deposit required" data-es="Se requiere depósito del 50% no reembolsable">50% non-refundable deposit required</li>
+                        <li data-en="Orders confirmed after deposit received" data-es="Órdenes confirmadas después de recibir el depósito">Orders confirmed after deposit received</li>
+                        <li data-en="Please include all details when ordering" data-es="Por favor incluye todos los detalles al ordenar">Please include all details when ordering</li>
+                        <li data-en="Closed Mondays & Tuesdays" data-es="Cerrado Lunes y Martes">Closed Mondays & Tuesdays</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <div class="policy-icon"><i data-lucide="credit-card"></i></div>
+                    <h3 data-en="Payment Methods" data-es="Métodos de Pago">Payment Methods</h3>
+                    <div class="payment-methods">
+                        <div class="payment-badge"><i data-lucide="smartphone"></i> Apple Pay</div>
+                        <div class="payment-badge"><i data-lucide="dollar-sign"></i> Cash App</div>
+                        <div class="payment-badge"><i data-lucide="send"></i> Zelle</div>
+                        <div class="payment-badge"><i data-lucide="banknote"></i> Cash</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Banner -->
+    <section class="seasonal" id="seasonal">
+        <div class="seasonal-bg"></div>
+        <div class="seasonal-overlay"></div>
+        <div class="container">
+            <div class="seasonal-content">
+                <span class="seasonal-label" data-en="Limited Time" data-es="Tiempo Limitado">Limited Time</span>
+                <h2 class="seasonal-title" data-en="Now Accepting Mother's Day Pre-Orders" data-es="Aceptando Pre-Órdenes para el Día de las Madres">Now Accepting Mother's Day Pre-Orders</h2>
+                <p class="seasonal-text" data-en="Secure your arrangement early and make her day unforgettable" data-es="Asegura tu arreglo temprano y haz su día inolvidable">Secure your arrangement early and make her day unforgettable</p>
+                <a href="#order" class="btn btn-primary btn-glow" data-en="Reserve Your Bouquet" data-es="Reserva tu Ramo">Reserve Your Bouquet</a>
+            </div>
+        </div>
+        <div class="petals"><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div></div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <div class="order-grid">
+                <div class="order-info">
+                    <span class="label" data-en="Ready?" data-es="¿Listo?">Ready?</span>
+                    <h2 class="section-title" data-en="Place Your Order" data-es="Haz tu Pedido">Place Your Order</h2>
+                    <p class="order-text" data-en="Tell us your colors, bouquet size, add-ons, and special message. We'll help you create something beautiful." data-es="Cuéntanos tus colores, tamaño de ramo, extras y mensaje especial. Te ayudaremos a crear algo hermoso.">Tell us your colors, bouquet size, add-ons, and special message. We'll help you create something beautiful.</p>
+                    <a href="https://instagram.com" target="_blank" class="contact-link"><i data-lucide="instagram"></i><span data-en="Message on Instagram" data-es="Mensaje en Instagram">Message on Instagram</span></a>
+                </div>
+                <div class="order-form-wrap">
+                    <form class="order-form" id="orderForm">
+                        <div class="form-group">
+                            <label data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-en="Date Needed" data-es="Fecha Necesaria">Date Needed</label>
+                                <input type="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-en="Time" data-es="Hora">Time</label>
+                                <input type="time" name="time">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Number of Roses" data-es="Número de Rosas">Number of Roses</label>
+                            <select name="roses" required>
+                                <option value="" data-en="Select bundle" data-es="Selecciona paquete">Select bundle</option>
+                                <option value="25">25 Roses (1 color)</option>
+                                <option value="50">50 Roses (2 colors)</option>
+                                <option value="75">75 Roses (3 colors)</option>
+                                <option value="100">100 Roses (4 colors)</option>
+                                <option value="125">125 Roses (5 colors)</option>
+                                <option value="150">150 Roses (5 colors)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Preferred Colors" data-es="Colores Preferidos">Preferred Colors</label>
+                            <input type="text" name="colors" placeholder="e.g., Red, Pink, White">
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Add-ons (Optional)" data-es="Extras (Opcional)">Add-ons (Optional)</label>
+                            <input type="text" name="addons" placeholder="Crowns, butterflies, diamonds...">
+                        </div>
+                        <div class="form-group">
+                            <label data-en="Special Message / Instructions" data-es="Mensaje Especial / Instrucciones">Special Message / Instructions</label>
+                            <textarea name="message" rows="3" placeholder="Ribbon wording, inspiration ideas..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-en="Submit Order Request" data-es="Enviar Solicitud de Pedido">Submit Order Request</button>
+                        <p class="form-note" data-en="We'll contact you to confirm details and arrange your 50% deposit." data-es="Te contactaremos para confirmar detalles y coordinar tu depósito del 50%.">We'll contact you to confirm details and arrange your 50% deposit.</p>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <i data-lucide="check-circle"></i>
+                        <h3 data-en="Thank You!" data-es="¡Gracias!">Thank You!</h3>
+                        <p data-en="We've received your order request. We'll contact you soon!" data-es="Hemos recibido tu solicitud. ¡Te contactaremos pronto!">We've received your order request. We'll contact you soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Juan's Casa De Flores</h3>
+                    <p class="script-accent">Hecho Con Amor</p>
+                    <p class="footer-location"><i data-lucide="map-pin"></i> Springdale, Arkansas</p>
+                </div>
+                <div class="footer-hours">
+                    <h4 data-en="Business Hours" data-es="Horario">Business Hours</h4>
+                    <ul>
+                        <li><span data-en="Monday" data-es="Lunes">Monday</span>: <span class="closed" data-en="Closed" data-es="Cerrado">Closed</span></li>
+                        <li><span data-en="Tuesday" data-es="Martes">Tuesday</span>: <span class="closed" data-en="Closed" data-es="Cerrado">Closed</span></li>
+                        <li><span data-en="Wed - Sun" data-es="Mié - Dom">Wed - Sun</span>: <span data-en="Open" data-es="Abierto">Open</span></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-en="Follow Us" data-es="Síguenos">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank"><i data-lucide="instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Juan's Casa De Flores LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Mobile CTA -->
+    <a href="#order" class="floating-cta" id="floatingCta">
+        <i data-lucide="flower"></i>
+        <span data-en="Order" data-es="Ordenar">Order</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
